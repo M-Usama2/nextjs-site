@@ -1,4 +1,4 @@
-import EcosystemIcon from "../assets/icons/ecosystem.svg";
+import Feature from "./Feature";
 
 const features = [
   {
@@ -30,13 +30,7 @@ export const Features = () => {
         </div>
         <div className="mt-16 flex flex-col sm:flex-row gap-4 sm:flex-1">
           {features.map((feature, index) => (
-            <div key={index} className="border border-white/30 px-5 py-10 text-center rounded-xl">
-              <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
-                <EcosystemIcon />
-              </div>
-              <h3 className="mt-6 font-bold">{feature.title}</h3>
-              <p className="mt-2 text-white/70">{feature.description}</p>
-            </div>
+            <Feature feature={feature} index={index} />
           ))}
         </div>
       </div>

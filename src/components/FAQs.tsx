@@ -32,7 +32,7 @@ export const FAQs = () => {
         </h2>
         <div className="mt-12 max-w-[648px] mx-auto">
           {items.map((item, index) => (
-            <AccordianItem item={item} index={index} />
+            <AccordianItem key={index} item={item} />
           ))}
         </div>
       </div>

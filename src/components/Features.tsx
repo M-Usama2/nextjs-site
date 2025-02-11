@@ -30,7 +30,7 @@ export const Features = () => {
         </div>
         <div className="mt-16 flex flex-col sm:flex-row gap-4 sm:flex-1">
           {features.map((feature, index) => (
-            <Feature feature={feature} index={index} />
+            <Feature key={index} feature={feature} />
           ))}
         </div>
       </div>

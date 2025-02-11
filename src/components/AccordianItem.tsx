@@ -5,7 +5,7 @@ import { useState } from "react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
 
-const AccordianItem = ({ item, index }: { item: any; index: number }) => {
+const AccordianItem = ({ item }: { item: any }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -27,7 +27,6 @@ const AccordianItem = ({ item, index }: { item: any; index: number }) => {
             }}
             animate={{ opacity: 1, height: "auto", marginTop: '16px' }}
             exit={{ opacity: 0, height: 0, marginTop: 0 }}
-            key={`${index}-${item.answer}`}
           >
             {item.answer}
           </motion.div>

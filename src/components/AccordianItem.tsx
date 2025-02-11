@@ -10,7 +10,6 @@ const AccordianItem = ({ item, index }: { item: any; index: number }) => {
 
   return (
     <div
-      key={index}
       className="py-7 border-b border-white/30"
       onClick={() => setIsOpen(!isOpen)}
     >
@@ -28,6 +27,7 @@ const AccordianItem = ({ item, index }: { item: any; index: number }) => {
             }}
             animate={{ opacity: 1, height: "auto", marginTop: '16px' }}
             exit={{ opacity: 0, height: 0, marginTop: 0 }}
+            key={`${index}-${item.answer}`}
           >
             {item.answer}
           </motion.div>

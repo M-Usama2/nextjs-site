@@ -27,26 +27,26 @@ export const LogoTicker = () => {
         </h2>
         <div className="flex overflow-hidden mt-9 before:content-[''] after:content-[''] before:z-10 before:absolute after:absolute before:h-full after:h-full before:w-5 after:w-5 relative  after:right-0 before:left-0 before:top-0 after:top-0 before:bg-gradient-to-r from-black to-transparent after:bg-gradient-to-l from-black to-transparent">
           <motion.div
-          transition={{
-            duration: 10,
-            ease: "linear",
-            repeat: Infinity,
-          }}
+            transition={{
+              duration: 10,
+              ease: "linear",
+              repeat: Infinity,
+            }}
             initial={{ translateX: 0 }}
             animate={{ translateX: "-50%" }}
             className="flex gap-16 flex-none pr-16"
           >
             {images.map((image, index) => (
               <Image
-                key={index}
+                key={`${index}-${image.src}`}
                 src={image.src}
                 alt={image.alt}
                 className="flex-none h-8 w-auto"
               />
             ))}
-              {images.map((image, index) => (
+            {images.map((image, index) => (
               <Image
-                key={index}
+                key={`${index}-${image.src}`}
                 src={image.src}
                 alt={image.alt}
                 className="flex-none h-8 w-auto"

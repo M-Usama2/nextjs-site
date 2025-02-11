@@ -26,7 +26,6 @@ const Feature = ({ feature, index }: { feature: any; index: number }) => {
 
   return (
     <div
-      key={index}
       className="border border-white/30 px-5 py-10 text-center rounded-xl sm:flex-1 relative"
     >
       <motion.div
@@ -40,7 +39,7 @@ const Feature = ({ feature, index }: { feature: any; index: number }) => {
       <div className="inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg">
         <EcosystemIcon />
       </div>
-      <h3 className="mt-6 font-bold">{feature.title}</h3>
+      <h3 key={`${index}-${feature.title}`} className="mt-6 font-bold">{feature.title}</h3>
       <p className="mt-2 text-white/70">{feature.description}</p>
     </div>
   );
